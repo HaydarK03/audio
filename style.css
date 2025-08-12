@@ -1,0 +1,8 @@
+.music-img {
+  /* background-image: url('photos/deep-space.jpg'); */
+  background-size: cover;
+  background-position: center center;
+  height: 40vh;
+  max-width: 100%;
+  border-radius: var(--radius);
+}
