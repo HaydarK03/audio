@@ -1,29 +1,24 @@
 {
   "songs": [
     {
-      "title": "Happy Clappy",
-      "audio": "audio/happy-clappy.mp3",
-      "cover": "photos/happy-clappy.jpg"
+      "title": "Calon Mantu Idaman",
+      "audio": "audio/calon-mantu-idaman.mp3",
+      "cover": "photos/calon-mantu-idaman.jpeg"
     },
     {
-      "title": "Mad Hatter",
-      "audio": "audio/mad-hatter.mp3",
-      "cover": "photos/mad-hatter.jpg"
+      "title": "Garam dan Madu",
+      "audio": "audio/garam-dan-madu.mp3",
+      "cover": "photos/garam-dan-madu.jpg"
     },
     {
-      "title": "Earning Happiness",
-      "audio": "audio/earning-happiness.mp3",
-      "cover": "photos/earning-happiness.jpg"
+      "title": "Kasih Aba-Aba",
+      "audio": "audio/kasih-aba-aba.mp3",
+      "cover": "photos/kasih-aba-aba.jpeg"
     },
     {
-      "title": "Somewhere Nice",
-      "audio": "audio/somewhere-nice.mp3",
-      "cover": "photos/somewhere-nice.jpg"
-    },
-    {
-      "title": "Deep Space",
-      "audio": "audio/deep-space.mp3",
-      "cover": "photos/deep-space.jpg"
+      "title": "Mejikuhibiniu",
+      "audio": "audio/mejikuhibiniu.mp3",
+      "cover": "photos/mejikuhibiniu.jpeg"
     }
   ]
 }
