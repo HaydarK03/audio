@@ -1,38 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/feather-icons"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Dashboard</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <audio id="audio"></audio>
-    <h2 class="music-title">Haydar</h2>
-    <div class="music-img"></div>
-    <div class="music-player">
-        <div class="bar-wrap" id="progess-wrap">
-            <div class="progress-bar" id="progress"></div>
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            lorem ipsum
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+            <header class="header">
+                <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, dolores. Sint, aspernatur.</h1>
+            </header>
+
+            <section class="top-artists">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae, consectetur est. Natus sit, commodi dignissimos quam architecto vitae sunt. Temporibus dolorum vitae reprehenderit doloribus, commodi ratione quod delectus! Suscipit aliquid at deleniti cupiditate amet. Provident, laborum blanditiis cupiditate soluta quae, voluptates, quam expedita voluptate quos accusantium dicta sed eligendi ab! Praesentium, ea nulla harum commodi voluptas officia accusantium earum quasi deleniti? Assumenda aspernatur vitae aliquid magni similique? Totam minima animi alias, voluptas molestias reprehenderit. Necessitatibus, repellat. Quis nulla officiis commodi aut quo laborum fugit blanditiis optio, eveniet molestiae odit repellat aspernatur, ad autem corporis iure soluta dicta, corrupti distinctio incidunt.</p>
+            </section>
+        </main>
+    </div>
+
+    <!-- Player Bar -->
+    <footer class="music-player">
+        <div class="block-left">
+            <div class="song">
+                <audio id="audio"></audio>
+                <div class="music-img"></div>
+                <div class="title">
+                    <div>
+                        <h4 class="music-title">Lorem Ipsum dolor</h2>
+                    </div>
+                    <div>
+                        <p class="music-singer">Travis Scott</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button id="prev">
+                    <img src="icon/skip-back.svg" alt="">
+                </button>
+
+                <button id="play">
+                    <img src="icon/play.svg" alt="">
+                </button>
+
+                <button id="next">
+                    <img src="icon/skip-forward.svg" alt="">
+                </button>
+            </div>
+        </div>
+        
+        <div class="block-center">
+            <div class="current-time">00:00</div>
+            <div class="bar-wrap" id="progess-wrap">
+                <div class="progress-bar" id="progress"></div>
+            </div>
+            <div class="total-duration">00:00</div>
+
         </div>
 
-        <input type="range" min="1" max="100" class="slider" id="myRange">
-<br>
-        <button id="prev">
-            prev
-        </button>
-        <button id="play">
-            <i data-feather="play"></i>
-            <i data-feather="pause" style="display: none;"></i>
-        </button>
-        <button id="next">
-            next
-        </button>
-    </div>
-    
+        <div class="block-right">
+            <div class="feature glass-card">
+                <img src="icon/mic.svg" alt="">
+                <img src="icon/plus-circle.svg" alt="">
+                <img src="icon/shuffle.svg" alt="">
+            </div>
+            <div class="volume">
+                <img src="icon/volume-2.svg" alt="">       
+                <input type="range" min="0" max="100" class="slider-volume" id="myRange">
+            </div>
+        </div>
+    </footer>
+
     <script src="app.js"></script>
-     <script>
-      feather.replace();
-    </script>
 </body>
 </html>

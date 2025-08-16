@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <audio id="audio"></audio>
+    <h2 class="music-title">Haydar</h2>
+    <div class="music-img"></div>
+    <div class="music-player">
+        <div class="current-time">00:00</div>
+        <div class="bar-wrap" id="progess-wrap">
+           <div class="progress-bar" id="progress"></div>
+        </div>
+        <div class="total-duration">00:00</div>
+
+        <input type="range" min="1" max="100" class="slider" id="myRange">
+<br>
+        <button id="prev">
+            <img src="icon/skip-back.svg" alt="">
+        </button>
+        <button id="play">
+            <img src="icon/play.svg" alt="">
+        </button>
+        <button id="next">
+            <img src="icon/skip-forward.svg" alt="">
+        </button>
+    </div>
+    
+    <script src="app.js"></script>
+     <script>
+      feather.replace();
+    </script>
+</body>
+</html>

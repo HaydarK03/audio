@@ -3,26 +3,22 @@
     {
       "title": "Calon Mantu Idaman",
       "audio": "audio/calon-mantu-idaman.mp3",
-      "cover": "photos/calon-mantu-idaman.jpeg",
-      "authr" : "Rombongan Bodonk Koplo feat Ncum"
+      "cover": "photos/calon-mantu-idaman.jpeg"
     },
     {
       "title": "Garam dan Madu",
       "audio": "audio/garam-dan-madu.mp3",
-      "cover": "photos/garam-dan-madu.jpg",
-      "authr" : "Tenxi, Naykilla & Jemsii"
+      "cover": "photos/garam-dan-madu.jpg"
     },
     {
       "title": "Kasih Aba-Aba",
       "audio": "audio/kasih-aba-aba.mp3",
-      "cover": "photos/kasih-aba-aba.jpeg",
-      "authr" : "Tenxi, Naykilla & Jemsii"
+      "cover": "photos/kasih-aba-aba.jpeg"
     },
     {
       "title": "Mejikuhibiniu",
       "audio": "audio/mejikuhibiniu.mp3",
-      "cover": "photos/mejikuhibiniu.jpeg",
-      "authr" : "Tenxi, suisei & Jemsii"
+      "cover": "photos/mejikuhibiniu.jpeg"
     }
   ]
 }

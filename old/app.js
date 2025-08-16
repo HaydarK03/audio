@@ -8,7 +8,6 @@ const audio = document.querySelector('#audio')
 // tittle and image
 const audioTitle = document.querySelector('.music-title')
 const audioImage = document.querySelector('.music-img')
-const audioSinger = document.querySelector('.music-singer')
 
 // volume
 let vol = document.getElementById('myRange')
@@ -73,8 +72,7 @@ function iconState() {
 function loadSong(song) {
     audioTitle.innerText = song.title;
     audio.src = `${song.audio}`;
-    audioImage.innerHTML = `<img src="${song.cover}" alt="">`;
-    audioSinger.innerText = song.authr;
+    audioImage.style.backgroundImage = `url('${song.cover}')`;
 }
 
 // load prev song
@@ -124,7 +122,7 @@ function progressbar(prog) {
     const currentminute = Math.floor(currentTime / 60)
     const currentsecond = Math.floor(currentTime - (currentminute * 60))
 
-    let nolduration = seconds < 10 ? `0${seconds}` : seconds;
+    let nolduration = seconds < 10 ? `${seconds}0` : seconds;
     
     songduration.innerHTML = `${minutes}:${nolduration}`
         
@@ -135,20 +133,16 @@ function progressbar(prog) {
 audio.addEventListener('timeupdate', progressbar);
 
 // update progress
-function updatebar(prog) {
+function updatebar(e) {
     const {duration} = audio;
-    const widht = this.clientWidth
-    const lebar = progress.offsetWidth
-    audio.currentTime = ( prog.offsetX / widht) * duration;
-    console.log(lebar)
+    audio.currentTime = ( e.offsetX / this.clientWidth) * duration;
 }
 progresswrap.addEventListener('click', updatebar);
 
-const slider = document.getElementById("myRange");        
-function upslider(){
-    const val = (slider.value - slider.min) / (slider.max - slider.min) * 100;
-    slider.style.background = `linear-gradient(90deg, royalblue ${val}%, #444 ${val}%)`;  
-};
+        const slider = document.getElementById("myRange");        
+        function upslider(){
+            const val = (slider.value - slider.min) / (slider.max - slider.min) * 100;
+            slider.style.background = `linear-gradient(90deg, royalblue ${val}%, #444 ${val}%)`;  
+        };
         
-slider.addEventListener('input', upslider)
-
+        slider.addEventListener('input', upslider)
