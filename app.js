@@ -12,11 +12,15 @@ const audioImage = document.querySelector('.music-img')
 // volume
 let vol = document.getElementById('myRange')
 
+// progress
+const progresswrap = document.querySelector('.bar-wrap');
+const progress = document.querySelector('.progress-bar');
+
 // songs
 let songs;
 let songIndex = 0;
 
-// FUNC
+// fets json
 async function getsongformserver() {
     await fetch('audio.json')
         .then((response) => {
@@ -38,6 +42,7 @@ getsongformserver();
 // play audio of current song
 function playAudio() {
     musicPlayer.classList.add('playing');
+
     audio.play();
 }
 
@@ -52,6 +57,7 @@ function isAudioPlaying() {
     return musicPlayer.classList.contains('playing');
 }
 
+// load song
 function loadSong(song) {
     audioTitle.innerText = song.title;
     audio.src = `${song.audio}`;
@@ -65,27 +71,47 @@ function prevSong() {
         songIndex = songs.length - 1;
     }
     loadSong(songs[songIndex]);
+    audio.play()
 }
 
+// load next song
 function nextSong() {
     songIndex += 1;
     if (songIndex > songs.length -1) {
         songIndex = 0;
     }
     loadSong(songs[songIndex]);
+    audio.play()
 }
+
 
 // Play, prev, next btns
 playBtn.addEventListener('click', () => {
     isAudioPlaying() ? pauseAudio() : playAudio();
+
 });
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
 
 
 // volume
+vol.addEventListener('input', () => {audio.volume = vol.value / 100} )
 
-let volval = vol.value / 100
+// progress
+function progressbar(prog) {
+    const { duration, currentTime } = prog.srcElement;
+    const progressPercentage = (currentTime / duration) * 100;
+    progress.style.width = `${progressPercentage}%`;
+    
+    if (progressPercentage == 100 ){
+        nextSong()
+    }
+}
+audio.addEventListener('timeupdate', progressbar);
 
-audio.volume = volval;
-
+// update progress
+function updatebar(e) {
+    const {duration} = audio;
+    audio.currentTime = ( e.offsetX / this.clientWidth) * duration;
+}
+progresswrap.addEventListener('click', updatebar);

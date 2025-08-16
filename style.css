@@ -6,3 +6,25 @@
   max-width: 100%;
   border-radius: var(--radius);
 }
+
+.bar-wrap{
+  margin: 15px 0;
+  border: 1px solid blueviolet;
+  border-radius: 15px;
+  width: 298px;
+  height: 6px;
+}
+
+.progress-bar{
+  background-color: blueviolet;
+  height: 6px;
+  border-radius: 15px;
+}
+
+.play{
+  display: block;
+}
+
+.pause{
+  display: block;
+}

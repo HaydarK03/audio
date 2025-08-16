@@ -5,23 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
     <audio id="audio"></audio>
     <h2 class="music-title">Haydar</h2>
     <div class="music-img"></div>
     <div class="music-player">
+        <div class="bar-wrap" id="progess-wrap">
+            <div class="progress-bar" id="progress"></div>
+        </div>
+
+        <input type="range" min="1" max="100" class="slider" id="myRange">
+<br>
         <button id="prev">
-            next
+            prev
         </button>
         <button id="play">
-            play
+            <i data-feather="play"></i>
+            <i data-feather="pause" style="display: none;"></i>
         </button>
         <button id="next">
             next
         </button>
-        <input type="range" min="1" max="100" class="slider" id="myRange">
     </div>
+    
     <script src="app.js"></script>
+     <script>
+      feather.replace();
+    </script>
 </body>
 </html>
