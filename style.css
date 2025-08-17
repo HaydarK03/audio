@@ -14,7 +14,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 220px 1fr; /* sidebar | main */
+  grid-template-columns: 320px 1fr; /* sidebar | main */
   flex: 1;
   overflow-y: auto;
 }
@@ -67,8 +67,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(90deg,rgba(5, 72, 99, 1) 0%, rgba(4, 92, 37, 1) 51%, rgba(176, 158, 0, 1) 100%);  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(11.5px);
+background: #02022b;
+background: linear-gradient(90deg,rgba(2, 2, 43, 1) 0%, rgba(12, 12, 77, 1) 35%, rgba(28, 2, 24, 1) 100%);  backdrop-filter: blur(11.5px);
   -webkit-backdrop-filter: blur(11.5px);
 }
 
@@ -107,16 +107,16 @@ body {
   cursor: pointer;
 }
 
-
-.player .bar-wrap{
-  background-color: rgb(117, 117, 117);
-}
-
 .bar-wrap{
   border-radius: 15px;
   width: 280px;
   height: 3px;
-  background-color: rgb(64, 64, 64);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .progress-bar{
@@ -131,6 +131,15 @@ body {
   justify-content: center;
   align-items: center;
   gap: 15px;
+  padding: 7px 10px;
+
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Base style slider */
@@ -162,7 +171,7 @@ body {
 .slider-volume::-moz-range-thumb {
   width: 10px;
   height: 10px;
-  background: royalblue;
+  background: rgb(4, 170, 18);
   border-radius: 50%;
   cursor: pointer;
   transition: 0.2s;
@@ -173,55 +182,71 @@ body {
 
 
 .feature {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
-    inset 0 0 8px 4px rgba(255, 255, 255, 0.4);
-  position: relative;
-  overflow: hidden;
-  
   display: flex;
   flex-direction: row;
   margin-right:50px;
   gap: 30px;
-  padding: 10px 30px;
+  padding: 7px 17px;
   justify-content: center;
   align-items: center;
   border-radius: 15px;
+
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.feature::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.8),
-    transparent
-  );
+.time{
+  font-size: small
 }
 
-.feature::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1px;
-  height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.8),
-    transparent,
-    rgba(255, 255, 255, 0.3)
-  );
+/* Sidebar */
+.sidebar {
+  background: #1d1a29;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #393953;
+}
+.profile-info{
+  gap: 20px;
+}
+.profile img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  padding: 2px 6px;
+  background: purple;
+  border-radius: 10px;
+  margin-top: 7px;
+}
+.menu h5 {
+  margin: 20px 0 10px;
+  font-size: 12px;
+  color: #aaa;
+}
+.menu ul {
+  list-style: none;
+}
+.menu li {
+  margin: 8px 0;
+  cursor: pointer;
+}
+.menu li:hover {
+  color: #ffb6ff;
 }

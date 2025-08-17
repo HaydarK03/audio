@@ -147,7 +147,7 @@ progresswrap.addEventListener('click', updatebar);
 const slider = document.getElementById("myRange");        
 function upslider(){
     const val = (slider.value - slider.min) / (slider.max - slider.min) * 100;
-    slider.style.background = `linear-gradient(90deg, royalblue ${val}%, #444 ${val}%)`;  
+    slider.style.background = `linear-gradient(90deg, rgb(4, 170, 18) ${val}%, #fff ${val}%)`;  
 };
         
 slider.addEventListener('input', upslider)
