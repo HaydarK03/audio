@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Music Dashboard</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -15,7 +20,7 @@
             <div class="profile">
                 <img src="photos/profile.jpeg" alt="profile">
                 <div class="profile-info">
-                    <h4>Quang Uno</h4>
+                    <h4>Jhon Dae</h4>
                     <span class="badge">PREMIUM</span>
                 </div>
             </div>
@@ -23,21 +28,48 @@
             <nav class="menu">
                 <h5>LIBRARY</h5>
                 <ul>
-                <li>Home</li>
-                <li>Songs</li>
-                <li>Albums</li>
-                <li>Artists</li>
-                <li>Liked</li>
-                <li>Playlists</li>
+                <li>
+                    <i data-feather="home"></i>
+                    <p>Home</p>
+                </li>
+                <li>
+                    <i data-feather="music"></i>
+                    <p>Songs</p>
+                </li>
+                <li>
+                    <i data-feather="layers"></i>
+                    <p>Albums</p>
+                </li>
+                <li>
+                    <i data-feather="users"></i>
+                    <p>Artists</p>
+                </li>
+                <li>
+                    <i data-feather="thumbs-up"></i>
+                    <p>Liked</p>
+                </li>
+                <li>
+                    <i data-feather="speaker"></i>
+                    <p>Playlists</p>
+                </li>
                 </ul>
             </nav>
 
             <nav class="menu">
                 <h5>DISCOVER</h5>
                 <ul>
-                <li>Radio</li>
-                <li>Podcast</li>
-                <li>Browse</li>
+                <li>
+                    <i data-feather="radio"></i>
+                    <p>Radio</p>
+                </li>
+                <li>
+                    <i data-feather="life-buoy"></i>
+                    <p>Podcast</p>
+                </li>
+                <li>
+                    <i data-feather="search"></i>
+                    <p>Browse</p>
+                </li>
                 </ul>
             </nav>
         </aside>
@@ -45,11 +77,226 @@
         <!-- Main Content -->
         <main class="main">
             <header class="header">
-                <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, dolores. Sint, aspernatur.</h1>
-            </header>
+                <!-- <div class="slider">
+                    <h1>Tenxi, Naykilla & Jemsii - Kasih Aba-Aba</h1>
+                </div> -->
+                <div class="slider-container">
+                    <div class="slider">
+                        <div class="slide active">
+                        <img src="photos/Banners_APT.jpg" alt="Slide 1">
+                        <div class="slide-info">
+                            <h2>Lady Gaga & BLACKPINK - Sour Candy</h2>
+                        </div>
+                        </div>
+                        <div class="slide">
+                        <img src="photos/pecahkan-rekor-lagu-garam-38-madu-oleh--9e7c35.webp" alt="Slide 2">
+                        <div class="slide-info">
+                            <h2>Ariana Grande - Rain On Me</h2>
+                            <p></p>
+                        </div>
+                        </div>
+                        <div class="slide">
+                        <img src="photos/Banners_DWAS.jpg" alt="Slide 3">
+                        <div class="slide-info">
+                            <h2>Justin Bieber - Stuck With U</h2>
+                        </div>
+                        </div>
+                    </div>
 
-            <section class="top-artists">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae, consectetur est. Natus sit, commodi dignissimos quam architecto vitae sunt. Temporibus dolorum vitae reprehenderit doloribus, commodi ratione quod delectus! Suscipit aliquid at deleniti cupiditate amet. Provident, laborum blanditiis cupiditate soluta quae, voluptates, quam expedita voluptate quos accusantium dicta sed eligendi ab! Praesentium, ea nulla harum commodi voluptas officia accusantium earum quasi deleniti? Assumenda aspernatur vitae aliquid magni similique? Totam minima animi alias, voluptas molestias reprehenderit. Necessitatibus, repellat. Quis nulla officiis commodi aut quo laborum fugit blanditiis optio, eveniet molestiae odit repellat aspernatur, ad autem corporis iure soluta dicta, corrupti distinctio incidunt.</p>
+                    <!-- indikator bulatan -->
+                    <div class="dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+            </header>
+             
+            <section class="trending">
+                <div class="trending-head">
+                    <div class="trending-title">
+                        <p>Featured</p>
+                        <h3>Trending</h3>
+                    </div>
+                    <div class="trending-next">
+                        <i data-feather="chevron-left"></i>
+                        <i data-feather="chevron-right"></i>
+                    </div>
+                </div>
+
+                <div class="trending-list">
+                    <div class="trending-card">
+                        <div class="trending-img">
+                            <img src="photos/calon-mantu-idaman.jpeg" alt="">
+                        </div>
+                        <div class="trending-info">
+                            <h4>Calon Mantu Idaman</h4>
+                            <p>Rombongan Bodonk...</p>
+                        </div>
+                    </div>
+                    <div class="trending-card">
+                        <div class="trending-img">
+                            <img src="photos/garam-dan-madu.jpg" alt="">
+                        </div>
+                        <div class="trending-info">
+                            <h4>Garam dan Madu</h4>
+                            <p>Tenxi, Naykilla & Jem...</p>
+                        </div>
+                    </div>
+                    <div class="trending-card">
+                        <div class="trending-img">
+                            <img src="photos/kasih-aba-aba.jpeg" alt="">
+                        </div>
+                        <div class="trending-info">
+                            <h4>Kasih Aba-Aba</h4>
+                            <p>Tenxi, Naykilla & Jems..</p>
+                        </div>
+                    </div>
+                    <div class="trending-card">
+                        <div class="trending-img">
+                            <img src="photos/mejikuhibiniu.jpeg" alt="">
+                        </div>
+                        <div class="trending-info">
+                            <h4>Mejikuhibiniu</h4>
+                            <p>Tenxi, suisei & Jemsii</p>
+                        </div>
+                    </div>
+                    <div class="trending-card">
+                        <div class="trending-img">
+                            <img src="photos/mejikuhibiniu.jpeg" alt="">
+                        </div>
+                        <div class="trending-info">
+                            <h4>Mejikuhibiniu</h4>
+                            <p>Tenxi, suisei & Jemsii</p>
+                        </div>
+                    </div>
+                    <div class="trending-card">
+                        <div class="trending-img">
+                            <img src="photos/mejikuhibiniu.jpeg" alt="">
+                        </div>
+                        <div class="trending-info">
+                            <h4>Mejikuhibiniu</h4>
+                            <p>Tenxi, suisei & Jemsii</p>
+                        </div>
+                    </div>
+                    <div class="trending-card">
+                        <div class="trending-img">
+                            <img src="photos/mejikuhibiniu.jpeg" alt="">
+                        </div>
+                        <div class="trending-info">
+                            <h4>Mejikuhibiniu</h4>
+                            <p>Tenxi, suisei & Jemsii</p>
+                        </div>
+                    </div>
+                    <div class="trending-card">
+                        <div class="trending-img">
+                            <img src="photos/mejikuhibiniu.jpeg" alt="">
+                        </div>
+                        <div class="trending-info">
+                            <h4>Mejikuhibiniu</h4>
+                            <p>Tenxi, suisei & Jemsii</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <section class="section-tracks">
+                <div class="tracks">
+                    <div class="tracks-title">
+                        <h3>Tracks For You</h3>
+                    </div>
+                    <div class="tracks-row">
+                        <div class="title">
+                            <p>Mejikuhibiniu</p>
+                        </div>
+                        <div class="singer">
+                            <p>Tenxi, suisei & Jemsii</p>
+                        </div>
+                        <div class="duration">
+                            <p>04:24</p>
+                            <div class="button-play">
+                                <i data-feather="play-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tracks-row">
+                        <div class="title">
+                            <p>Kasih Aba-Aba</p>
+                        </div>
+                        <div class="singer">
+                            <p>Tenxi, Naykilla & Jemsii</p>
+                        </div>
+                        <div class="duration">
+                            <p>04:24</p>
+                            <div class="button-play">
+                                <i data-feather="play-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tracks-row">
+                        <div class="title">
+                            <p>Garam dan Madu</p>
+                        </div>
+                        <div class="singer">
+                            <p>Tenxi, Naykilla & Jemsii</p>
+                        </div>
+                        <div class="duration">
+                            <p>04:24</p>
+                            <div class="button-play">
+                                <i data-feather="play-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tracks-row">
+                        <div class="title">
+                            <p>Calon Mantu Idaman</p>
+                        </div>
+                        <div class="singer">
+                            <p>Rombongan Bodonk Koplo feat Ncum</p>
+                        </div>
+                        <div class="duration">
+                            <p>04:24</p>
+                            <div class="button-play">
+                                <i data-feather="play-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="history">
+                    <div class="history-title">
+                        <h3>Listening History</h3>
+                    </div>
+                    <div class="history-row">
+                        <div class="title">
+                            <p>Mejikuhibiniu</p>
+                        </div>
+                        <div class="singer">
+                            <p>Tenxi, suisei & Jemsii</p>
+                        </div>
+                        <div class="duration">
+                            <p>04:24</p>
+                            <div class="button-play">
+                                <i data-feather="play-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="history-row">
+                        <div class="title">
+                            <p>Kasih Aba-Aba</p>
+                        </div>
+                        <div class="singer">
+                            <p>Tenxi, Naykilla & Jemsii</p>
+                        </div>
+                        <div class="duration">
+                            <p>04:24</p>
+                            <div class="button-play">
+                                <i data-feather="play-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
     </div>
@@ -108,5 +355,8 @@
     </footer>
 
     <script src="app.js"></script>
+    <script>
+      feather.replace();
+    </script>
 </body>
 </html>

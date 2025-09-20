@@ -4,12 +4,13 @@
 }
 body {
   font-family: Arial, sans-serif;
-  background: #111;
+  background: #090414;
   color: #fff;
   margin: 0;
   display: flex;
   flex-direction: column;
   height: 100vh;
+  font-family: "Montserrat", sans-serif;
 }
 
 .container {
@@ -30,10 +31,10 @@ body {
 
 /* Main */
 .main {
-  padding: 20px;
-  display: grid;
-  grid-template-rows: auto auto auto auto;
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  /* grid-template-rows: auto auto auto auto; */
+  /* gap: 20px; */
 }
 
 .block-left{
@@ -70,6 +71,7 @@ body {
 background: #02022b;
 background: linear-gradient(90deg,rgba(2, 2, 43, 1) 0%, rgba(12, 12, 77, 1) 35%, rgba(28, 2, 24, 1) 100%);  backdrop-filter: blur(11.5px);
   -webkit-backdrop-filter: blur(11.5px);
+  backdrop-filter: blur(10px);
 }
 
 .song{
@@ -105,6 +107,10 @@ background: linear-gradient(90deg,rgba(2, 2, 43, 1) 0%, rgba(12, 12, 77, 1) 35%,
   border: none;
   padding: 10px;
   cursor: pointer;
+}
+
+.test{
+  color: white;
 }
 
 .bar-wrap{
@@ -230,15 +236,16 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 .badge {
   display: inline-block;
   font-size: 12px;
-  padding: 2px 6px;
-  background: purple;
-  border-radius: 10px;
-  margin-top: 7px;
+  padding: 4px 10px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  margin-top: 10px;
 }
 .menu h5 {
   margin: 20px 0 10px;
   font-size: 12px;
-  color: #aaa;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
 }
 .menu ul {
   list-style: none;
@@ -246,7 +253,190 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 .menu li {
   margin: 8px 0;
   cursor: pointer;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  color: #544c6d;
+  padding: 10px 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
 }
 .menu li:hover {
-  color: #ffb6ff;
+  color: #ffffff;
+}
+
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.slide-info {
+  position: absolute;
+  bottom: 0px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  padding-left: 50px;
+  backdrop-filter: blur(10px);
+}
+
+.slide-info h2 {
+  font-weight: 600;
+  margin: 0;
+  font-size: 2rem;
+}
+
+
+.dots {
+  text-align: left;
+  padding-left: 50px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.dot {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  margin: 0 4px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #fff;
+}
+
+.trending{
+  margin-top: 25px;
+  margin-left: 50px;
+  margin-bottom: 25px;
+}
+
+.trending-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.trending .trending-title p{
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: #828282;
+}
+
+.trending .trending-title h3{
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.trending-list{
+  display: flex;
+  gap: 25px;
+}
+
+.trending-card{
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+}
+
+.trending-card .trending-img{
+  margin:15px 0;
+}
+
+.trending-card .trending-img img{
+  width: 160px;
+  border-radius: 10px;
+}
+
+.trending-info h4{
+  margin-bottom: 5px;
+}
+
+.trending-info p{
+  font-size: 15px;
+  color: #828282;
+}
+
+.section-tracks{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.tracks-row,
+.history-row{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  align-items: center;
+  padding: 15px 0; 
+}
+
+.tracks-title h3,
+.history-title h3{
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.tracks-row .title,
+.history-row .title{
+  font-weight: 500
+}
+
+.tracks-row .duration p{
+  color: #828282;
+}
+
+.tracks-row .duration{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+
+.tracks-row .singer,
+.history-row .singer{
+  color: #828282;
+  font-size: 15px;
+}
+
+.history-row .duration p{
+  color: #828282;
+}
+
+.history-row .duration{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
 }
