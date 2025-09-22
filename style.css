@@ -4,7 +4,7 @@
 }
 body {
   font-family: Arial, sans-serif;
-  background: #090414;
+  /* background: #090414; */
   color: #fff;
   margin: 0;
   display: flex;
@@ -35,6 +35,8 @@ body {
   flex-direction: column;
   /* grid-template-rows: auto auto auto auto; */
   /* gap: 20px; */
+  background: #0F0124;
+  background: linear-gradient(178deg,rgba(15, 1, 36, 1) 35%, rgba(23, 16, 31, 1) 43%, rgba(14, 0, 26, 1) 53%);
 }
 
 .block-left{
@@ -68,8 +70,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-background: #02022b;
-background: linear-gradient(90deg,rgba(2, 2, 43, 1) 0%, rgba(12, 12, 77, 1) 35%, rgba(28, 2, 24, 1) 100%);  backdrop-filter: blur(11.5px);
+  background: #02022b;
+  background: linear-gradient(90deg,rgba(2, 2, 43, 1) 0%, rgba(12, 12, 77, 1) 35%, rgba(28, 2, 24, 1) 100%);  backdrop-filter: blur(11.5px);
   -webkit-backdrop-filter: blur(11.5px);
   backdrop-filter: blur(10px);
 }
@@ -140,12 +142,12 @@ background: linear-gradient(90deg,rgba(2, 2, 43, 1) 0%, rgba(12, 12, 77, 1) 35%,
   padding: 7px 10px;
 
   /* From https://css.glass */
-background: rgba(255, 255, 255, 0.2);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Base style slider */
@@ -198,12 +200,12 @@ border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 15px;
 
   /* From https://css.glass */
-background: rgba(255, 255, 255, 0.2);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .time{
@@ -212,7 +214,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 
 /* Sidebar */
 .sidebar {
-  background: #1d1a29;
+  background: #0f0124;
   padding: 35px;
   display: flex;
   flex-direction: column;
